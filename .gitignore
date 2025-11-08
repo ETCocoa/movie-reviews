@@ -2,12 +2,9 @@ core.Microsoft*
 core.mongo*
 core.python*
 env.py
-__pycache__/
-*.py[cod]
 node_modules/
 .github/
 cloudinary_python.txt
-.venv/
 blog/fixtures/
 
 # Django #
@@ -58,7 +55,7 @@ out/
 atlassian-ide-plugin.xml
 
 # Python # 
-*.py[cod] 
+*.py[cod]
 *$py.class 
 
 # Distribution / packaging 
@@ -111,7 +108,7 @@ celerybeat-schedule.*
 
 # Environments 
 .env 
-.venv 
+.venv
 env/ 
 venv/ 
 ENV/ 
