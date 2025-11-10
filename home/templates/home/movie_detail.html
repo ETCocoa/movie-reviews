@@ -15,11 +15,11 @@
         </p>
       </div>
       <div class="d-none d-md-block col-md-6 masthead-image">
-        {% if "placeholder" in movie.featured_image.url %}
+        {% if "placeholder" in movie.movie_image.url %}
         <img src="{% static 'images/default.jpg' %}" class="scale"
           alt="placeholder image">
         {% else %}
-        <img src="{{ movie.featured_image.url }}" class="scale"
+        <img src="{{ movie.movie_image.url }}" class="scale"
           alt="{{ movie.title }}">
         {% endif %}
       </div>
