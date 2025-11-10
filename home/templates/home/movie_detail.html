@@ -64,12 +64,16 @@
             </span> wrote:
           </p>
           <div id="review{{ review.id }}">
-            {{ review.body | linebreaks }}
+            {{ review.body | linebreaks }}{{ review.rating }} / 10
           </div>
           {% if not review.approved and review.author == user %}
           <p class="approval">
             This review is awaiting approval
           </p>
+          {% endif %}
+          {% if user.is_authenticated and comment.author == user %}
+            <button class="btn btn-edit"
+              comment_id="{{ comment.id }}">Edit</button>
           {% endif %}
         </div>
         <!-- Our for loop ends here -->
@@ -98,3 +102,7 @@
 </div>
 
 {% endblock content %}
+
+{% block extras %}
+<script src="{% static 'js/reviews.js' %}"></script>
+{% endblock %}
