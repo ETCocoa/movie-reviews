@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -13,7 +14,7 @@ class Movie(models.Model):
     length = models.PositiveIntegerField(help_text="Length in minutes")
     released = models.DateField()
     status = models.IntegerField(choices=STATUS, default=0)
-    # movie_image = CloudinaryField("image", default="placeholder")
+    movie_image = CloudinaryField("image", default="placeholder")
 
     # Roles involved in movie
     directors = models.ManyToManyField("Person", related_name="directed_movies", blank=True)
