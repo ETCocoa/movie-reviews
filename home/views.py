@@ -6,4 +6,5 @@ from .models import Movie
 # Create your views here.
 class MovieList(generic.ListView):
     queryset = Movie.objects.all().filter(status=1)
-    template_name = "movie_list.html"
+    template_name = "home/index.html"
+    paginate_by = 6
