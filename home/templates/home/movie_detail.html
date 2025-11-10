@@ -11,10 +11,19 @@
         <h1 class="post-title">{{ movie.title }}</h1>
         <!-- Post author goes before the | the post's created date goes after -->
         <p class="post-subtitle">
-          Directors: {{ movie.directors.all|join:", "}} | {{ movie.created_on }}
+          Released: {{ movie.released }}
+        </p>
+        <p class="post-subtitle">
+          Directors: {{ movie.directors.all|join:", "}}
+        </p>
+        <p class="post-subtitle">
+          Stars: {{ movie.stars.all|join:", "}}
+        </p>
+        <p class="post-subtitle">
+          Genres: {{ movie.genres.all|join:", "}}
         </p>
       </div>
-      <div class="d-none d-md-block col-md-6 masthead-image">
+      <div class="col-md-6 masthead-image">
         {% if "placeholder" in movie.movie_image.url %}
         <img src="{% static 'images/default.jpg' %}" class="scale"
           alt="placeholder image">
