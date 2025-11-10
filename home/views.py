@@ -29,7 +29,7 @@ def movie_detail(request, slug):
                 request, messages.SUCCESS,
                 "Review submitted and awaiting approval"
             )
-    
+
     review_form = ReviewForm()
 
     return render(
