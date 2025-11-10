@@ -57,7 +57,7 @@
               <a
                 class="nav-link {% if request.path == home_url %}active{% endif %}"
                 aria-current="page"
-                href="#"
+                href="{% url 'home' %}"
                 >Home</a
               >
             </li>
@@ -74,7 +74,7 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-      <p class="m-0 text-center text-white">Adam Haines 2025</p>
+      <p class="m-0 text-center text-white">Copyright 2025 Adam Haines</p>
     </footer>
 
     <script
